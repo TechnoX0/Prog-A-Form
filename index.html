@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration</title>
+</head>
+<body>
+    
+    <div id="studentForm">
+        <form target="_blank">
+            <h1>ACLC Student Registration</h1>
+            <!-- Name -->
+            <label for="firstName">Full Name<span class="required">*</span></label><br>
+            <input type="text" name="firstName" id="firstName" class="fullName" placeholder="First Name" required>
+            <input type="text" name="lastName" id="lastName" class="fullName" placeholder="Last Name" required>
+            
+            <!-- Email -->
+            <label for="email">Email<span class="required">*</span></label><br>
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+
+            <!-- Grade -->
+            <label for="grade">Grade Level<span class="required">*</span></label><br>
+            <select name="grade" id="grade" required>
+                <option value="grd11" selected>Grade 11</option>
+                <option value="grd12">Grade 12</option>
+            </select>
+
+            <!-- LRN -->
+            <label for="LRN">LRN<span class="required">*</span></label><br>
+            <input type="number" name="course" id="LRN" pattern="[12][0-9]{10}" placeholder="Ex. 121234567890" min="1" required>
+
+            <!-- Contact Number -->
+            <label for="contactNumber">Contact Number<span class="required">*</span></label><br>
+            <input type="number" name="contactNumber" id="contactNumber" pattern="[09][0-9]{9}" placeholder="Ex. 09123456789" min="1" required>
+
+            <!-- Address -->
+            <label for="streetAddress">Address<span class="required">*</span></label><br>
+            <input type="text" name="streetAddress" id="streetAddress" placeholder="Street Adress" required>
+            <input type="number" name="houseNumber" id="houseNumber" placeholder="House Number (Optional)" min="1">
+            <input type="text" name="city" id="city" placeholder="City" required>
+            <input type="text" name="state" id="state" placeholder="State/Province" required>
+            <input type="number" name="postal" id="postal" placeholder="Postal Code (Optional)" min="1">
+            <select name="country" id="country" required>
+                <option value="philippines" selected>Philippines</option>
+                <option value="korea">Korea</option>
+                <option value="japan">Japan</option>
+            </select>
+
+            <!-- Terms and Condition -->
+            <fieldset>
+                <input type="checkbox" name="TaC" id="TaC" required>
+                <label for="TaC">By clicking Submit you agree to our <u class="hover">Terms and Condition.</u></label>
+            </fieldset>
+
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="hover">
+            
+        </form>
+    </div>
+
+</body>
+</html>
