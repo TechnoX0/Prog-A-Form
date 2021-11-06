@@ -24,7 +24,8 @@
             <!-- Grade -->
             <label for="grade">Grade Level<span class="required">*</span></label><br>
             <select name="grade" id="grade" required>
-                <option value="grd11" selected>Grade 11</option>
+                <option value="blank" selected hidden>Please select item</option>
+                <option value="grd11">Grade 11</option>
                 <option value="grd12">Grade 12</option>
             </select>
 
@@ -44,7 +45,8 @@
             <input type="text" name="state" id="state" placeholder="State/Province" required>
             <input type="number" name="postal" id="postal" placeholder="Postal Code (Optional)" min="1">
             <select name="country" id="country" required>
-                <option value="philippines" selected>Philippines</option>
+                <option value="blank" selected hidden>Please select item</option>
+                <option value="philippines">Philippines</option>
                 <option value="korea">Korea</option>
                 <option value="japan">Japan</option>
                 <option value="other">Other</option>
@@ -65,6 +67,7 @@
     <script>
         let submit = document.getElementById("submit");
         let TaC = document.getElementById("TaC");
+
         function checkDisabled() {
             if(TaC.checked) {
                 submit.disabled = false;
