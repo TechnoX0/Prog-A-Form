@@ -35,7 +35,8 @@ input[type="submit"] {
     display: block;
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(7, 0, 145);
+    /* background-color: rgb(7, 0, 145); */
+    background-color: rgb(57, 50, 196);
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +45,7 @@ input[type="submit"] {
 
 input[type="submit"]:disabled {
     cursor: not-allowed;
-    background-color: rgb(57, 50, 196);
+    background-color: rgb(67, 57, 255);
 }
 
 h1 {
