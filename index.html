@@ -51,15 +51,27 @@
 
             <!-- Terms and Condition -->
             <fieldset>
-                <input type="checkbox" name="TaC" id="TaC" required>
+                <input type="checkbox" name="TaC" id="TaC" onclick="checkDisabled()" required>
                 <label for="TaC">By clicking Submit you agree to our <u class="hover">Terms and Condition.</u></label>
             </fieldset>
 
             <!-- Submit -->
-            <input type="submit" value="Submit" class="hover">
+            <input type="submit" value="Submit" class="hover" id="submit" disabled>
             
         </form>
     </div>
+
+    <script>
+        let submit = document.getElementById("submit");
+        let TaC = document.getElementById("TaC");
+        function checkDisabled() {
+            if(TaC.checked) {
+                submit.disabled = false;
+            } else {
+                submit.disabled = true;
+            }
+        }
+    </script>
 
 </body>
 </html>
